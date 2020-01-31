@@ -1,0 +1,388 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{270987B4-2006-4C62-A9DE-E1189A970BBF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>saleslead</RootNamespace>
+    <AssemblyName>saleslead</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Login_v15\css\main.css" />
+    <Content Include="Login_v15\css\util.css" />
+    <Content Include="Login_v15\dataform.aspx" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Login_v15\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Login_v15\images\bg-01.jpg" />
+    <Content Include="Login_v15\images\icons\favicon.ico" />
+    <Content Include="Login_v15\images\icons\map-marker.png" />
+    <Content Include="Login_v15\index.html" />
+    <Content Include="Login_v15\js\main.js" />
+    <Content Include="Login_v15\js\map-custom.js" />
+    <Content Include="Login_v15\login.aspx" />
+    <Content Include="Login_v15\vendor\animate\animate.css" />
+    <Content Include="Login_v15\vendor\animsition\css\animsition.css" />
+    <Content Include="Login_v15\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Login_v15\vendor\animsition\js\animsition.js" />
+    <Content Include="Login_v15\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Login_v15\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Login_v15\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Login_v15\vendor\bootstrap\js\popper.js" />
+    <Content Include="Login_v15\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Login_v15\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Login_v15\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Login_v15\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Login_v15\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Login_v15\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Login_v15\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Login_v15\vendor\daterangepicker\moment.js" />
+    <Content Include="Login_v15\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Login_v15\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Login_v15\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Login_v15\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Login_v15\vendor\select2\select2.css" />
+    <Content Include="Login_v15\vendor\select2\select2.js" />
+    <Content Include="Login_v15\vendor\select2\select2.min.css" />
+    <Content Include="Login_v15\vendor\select2\select2.min.js" />
+    <Content Include="Login_v15\WebForm1.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="__MACOSX\Login_v15\._index.html" />
+    <Content Include="__MACOSX\Login_v15\css\._main.css" />
+    <Content Include="__MACOSX\Login_v15\css\._util.css" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\._HELP-US-OUT.txt" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\css\._font-awesome.css" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\css\._font-awesome.min.css" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\fonts\._fontawesome-webfont.svg" />
+    <Content Include="__MACOSX\Login_v15\fonts\Linearicons-Free-v1.0.0\._icon-font.min.css" />
+    <Content Include="__MACOSX\Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\._Linearicons-Free.svg" />
+    <Content Include="__MACOSX\Login_v15\images\._bg-01.jpg" />
+    <Content Include="__MACOSX\Login_v15\images\icons\._favicon.ico" />
+    <Content Include="__MACOSX\Login_v15\images\icons\._map-marker.png" />
+    <Content Include="__MACOSX\Login_v15\js\._main.js" />
+    <Content Include="__MACOSX\Login_v15\js\._map-custom.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\animate\._animate.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\animsition\css\._animsition.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\animsition\css\._animsition.min.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\animsition\js\._animsition.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\animsition\js\._animsition.min.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap-grid.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap-grid.min.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap-reboot.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap-reboot.min.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap.min.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\js\._bootstrap.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\js\._bootstrap.min.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\js\._popper.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\js\._popper.min.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\js\._tooltip.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\countdowntime\._countdowntime.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\css-hamburgers\._hamburgers.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\css-hamburgers\._hamburgers.min.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\daterangepicker\._daterangepicker.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\daterangepicker\._daterangepicker.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\daterangepicker\._moment.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\daterangepicker\._moment.min.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\jquery\._jquery-3.2.1.min.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\perfect-scrollbar\._perfect-scrollbar.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\perfect-scrollbar\._perfect-scrollbar.min.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\select2\._select2.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\select2\._select2.js" />
+    <Content Include="__MACOSX\Login_v15\vendor\select2\._select2.min.css" />
+    <Content Include="__MACOSX\Login_v15\vendor\select2\._select2.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login_v15\dataform.aspx.cs">
+      <DependentUpon>dataform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_v15\dataform.aspx.designer.cs">
+      <DependentUpon>dataform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_v15\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_v15\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_v15\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_v15\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Login_v15\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Login_v15\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Login_v15\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="__MACOSX\._Login_v15" />
+    <Content Include="__MACOSX\Login_v15\._css" />
+    <Content Include="__MACOSX\Login_v15\._fonts" />
+    <Content Include="__MACOSX\Login_v15\._images" />
+    <Content Include="__MACOSX\Login_v15\._js" />
+    <Content Include="__MACOSX\Login_v15\._vendor" />
+    <Content Include="__MACOSX\Login_v15\fonts\._font-awesome-4.7.0" />
+    <Content Include="__MACOSX\Login_v15\fonts\._Linearicons-Free-v1.0.0" />
+    <Content Include="__MACOSX\Login_v15\fonts\._poppins" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\._css" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\._fonts" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\._less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\._scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\fonts\._fontawesome-webfont.eot" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\fonts\._fontawesome-webfont.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\fonts\._fontawesome-webfont.woff" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\fonts\._fontawesome-webfont.woff2" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\fonts\._FontAwesome.otf" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._animated.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._bordered-pulled.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._core.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._fixed-width.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._font-awesome.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._icons.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._larger.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._list.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._mixins.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._path.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._rotated-flipped.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._screen-reader.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._stacked.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\less\._variables.less" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\._font-awesome.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__animated.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__bordered-pulled.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__core.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__fixed-width.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__icons.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__larger.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__list.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__mixins.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__path.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__rotated-flipped.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__screen-reader.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__stacked.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\font-awesome-4.7.0\scss\.__variables.scss" />
+    <Content Include="__MACOSX\Login_v15\fonts\Linearicons-Free-v1.0.0\._WebFont" />
+    <Content Include="__MACOSX\Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\._Linearicons-Free.eot" />
+    <Content Include="__MACOSX\Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\._Linearicons-Free.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\._Linearicons-Free.woff" />
+    <Content Include="__MACOSX\Login_v15\fonts\Linearicons-Free-v1.0.0\WebFont\._Linearicons-Free.woff2" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-Black.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-BlackItalic.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-Bold.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-BoldItalic.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-ExtraBold.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-ExtraLight.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-ExtraLightItalic.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-Italic.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-Light.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-LightItalic.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-Medium.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-MediumItalic.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-Regular.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-SemiBold.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-SemiBoldItalic.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-Thin.ttf" />
+    <Content Include="__MACOSX\Login_v15\fonts\poppins\._Poppins-ThinItalic.ttf" />
+    <Content Include="__MACOSX\Login_v15\images\._icons" />
+    <Content Include="__MACOSX\Login_v15\vendor\._animate" />
+    <Content Include="__MACOSX\Login_v15\vendor\._animsition" />
+    <Content Include="__MACOSX\Login_v15\vendor\._bootstrap" />
+    <Content Include="__MACOSX\Login_v15\vendor\._countdowntime" />
+    <Content Include="__MACOSX\Login_v15\vendor\._css-hamburgers" />
+    <Content Include="__MACOSX\Login_v15\vendor\._daterangepicker" />
+    <Content Include="__MACOSX\Login_v15\vendor\._jquery" />
+    <Content Include="__MACOSX\Login_v15\vendor\._perfect-scrollbar" />
+    <Content Include="__MACOSX\Login_v15\vendor\._select2" />
+    <Content Include="__MACOSX\Login_v15\vendor\animsition\._css" />
+    <Content Include="__MACOSX\Login_v15\vendor\animsition\._js" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\._css" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\._js" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap-grid.css.map" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap-grid.min.css.map" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap-reboot.css.map" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap-reboot.min.css.map" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap.css.map" />
+    <Content Include="__MACOSX\Login_v15\vendor\bootstrap\css\._bootstrap.min.css.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56180</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56180/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
